@@ -120,7 +120,7 @@
             <li></li>
             <li></li>
         </ul>
-        <a href="../index.html">
+        <a href="../index">
             <button class="button"></button>
             </a>
     </body>
