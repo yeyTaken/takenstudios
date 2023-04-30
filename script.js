@@ -5,22 +5,36 @@ nome.classList.add("clip-path");
 const infoButton = document.querySelector('.info-button');
 const infoPanel = document.querySelector('.info-panel');
 
-infoButton.addEventListener('click', function() {
-    if (infoPanel.style.display === 'block') {
-      infoPanel.style.display = 'none';
-    } else {
-      infoPanel.style.display = 'block';
-    }
-  });
+infoButton.addEventListener("click", function() {
+  infoButton.classList.toggle("active");
+  infoPanel.classList.toggle("active");
+});
+
+window.addEventListener("click", function(event) {
+  if (!event.target.matches(".info-button") && !event.target.matches(".info-panel") && panelButton.classList.contains("active")) {
+    infoButton.classList.remove("active");
+    infoPanel.classList.remove("active");
+  }
+});
 
   //============
-  function aceitarCookies() {
-    // define o cookie com uma validade de 30 dias
-    var data = new Date();
-    data.setTime(data.getTime() + (30 * 24 * 60 * 60 * 1000));
-    var expires = "expires="+ data.toUTCString();
-    document.cookie = "cookiesAceitos=true;" + expires + ";path=/";
-    // remove o aviso de cookies
-    document.getElementById("aviso-de-cookies").style.display = "none";
-  }
+  const panelButton = document.querySelector(".panel-button");
+  const linkPanel = document.querySelector(".link-panel");
   
+  panelButton.addEventListener("click", function() {
+    panelButton.classList.toggle("active");
+    linkPanel.classList.toggle("active");
+  });
+  
+  window.addEventListener("click", function(event) {
+    if (!event.target.matches(".panel-button") && !event.target.matches(".link-panel") && panelButton.classList.contains("active")) {
+      panelButton.classList.remove("active");
+      linkPanel.classList.remove("active");
+    }
+  });
+  
+  //=========== rede social ================
+  const myButton = document.getElementById("myButton");
+myButton.addEventListener("click", function() {
+  alert("Você clicou no botão!");
+});
