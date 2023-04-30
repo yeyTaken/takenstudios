@@ -1,6 +1,5 @@
 const nome = document.getElementById("nome");
 nome.classList.add("clip-path");
-
 //===============
 const infoButton = document.querySelector('.info-button');
 const infoPanel = document.querySelector('.info-panel');
@@ -12,7 +11,6 @@ infoButton.addEventListener('click', function() {
       infoPanel.style.display = 'block';
     }
   });
-
   //============
   function aceitarCookies() {
     // define o cookie com uma validade de 30 dias
