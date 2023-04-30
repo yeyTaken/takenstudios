@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>TakenStudios</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./img/logo.png">
+    <meta property="og:image" content="./img/logo.png">
+    <meta property="og:title" content="TakenStudios">
+    <meta property="og:description" content="A TakenStudios é uma empresa de criação de software e jogos composta por programadores apaixonados por tecnologia. Nós criamos bots, sites, apps e jogos com qualidade e inovação. Venha conhecer nosso trabalho e junte-se à nossa comunidade de jogadores e entusiastas da tecnologia!    ">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/">
+    <meta property="og:site_name" content="TakenStudios">
+    <meta name="theme-color" content="#333333">
+  </head>
+  <body>
+    <div class="container">
+      <div class="profile">
+        <img src="./img/israel.jpg" alt="Foto de Perfil">
+        <h1 id="nome">Israel</h1>
+        <p>Transformando ideias em realidade através da programação!</p>
+      </div>
+    </div>
+
+    <button class="info-button"></button>
+
+    <div class="info-panel">
+      <h2>Informações</h2>
+      <p>A TakenStudios é uma empresa de criação de software e jogos composta por programadores apaixonados por tecnologia. Nós criamos bots, sites, apps e jogos com qualidade e inovação. Venha conhecer nosso trabalho e junte-se à nossa comunidade de jogadores e entusiastas da tecnologia!</p>
+    </div>
+    
+    <div class="footer"> <h2>2021 © TakensStudios</h2> </div>
+    
+
+    <script src="script.js"></script>
+    <script>
+      window.onload = function(){
+        document.getElementById("loader-wrapper").style.display = "none";
+        document.getElementById("conteudo").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
