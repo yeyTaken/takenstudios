@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule ^profile$ /profile.html [L]
+RewriteRule ^index$ /index.html [L]
