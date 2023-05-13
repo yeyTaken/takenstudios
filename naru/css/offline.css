@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+      /* Estilo para a barra de rolagem */
+  ::-webkit-scrollbar {
+        width: 10px;
+        background-color: #1e1e1e;      
+  }
+  
+      /* Estilo para o "polegar" da barra de rolagem */
+ ::-webkit-scrollbar-thumb {
+        background-color: #9b59b6;
+        border-radius: 5px;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url("../img/offline.png");
+    background-repeat: 1;
+    background-size: cover;
+    color: #fff;
+  }
+
+  @media screen and (max-width: 764px) {
+
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url("../img/offline-mobile.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #fff;
+      }
+}

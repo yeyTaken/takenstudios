@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+      /* Estilo para a barra de rolagem */
+  ::-webkit-scrollbar {
+        width: 10px;
+        background-color: #1e1e1e;      
+  }
+  
+      /* Estilo para o "polegar" da barra de rolagem */
+ ::-webkit-scrollbar-thumb {
+        background-color: #9b59b6;
+        border-radius: 5px;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url("../../img/background.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+  }
+  
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .profile {
+    text-align: center;
+  }
+  
+  .profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: none;
+    object-position: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .profile p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .profile a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #202020;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .profile a:hover {
+    background-color: #444;
+  }
+
+  /* Adicione as classes CSS necessárias para a animação */
+@keyframes clip-path {
+  0% {
+    clip-path: polygon(0 0, 0 100%, 0% 100%, 0% 0%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+.clip-path {
+  animation: clip-path 1s forwards;
+  -webkit-clip-path: polygon(0 0, 0 100%, 0% 100%, 0% 0%);
+  clip-path: polygon(0 0, 0 100%, 0% 100%, 0% 0%);
+}
+
+
+/* botão info */
+.info-button {
+  background-image: url('../../img/i.webp');
+  background-size: contain; /* garante que a imagem não fique distorcida */
+  width: 30px; /* define a largura da imagem */
+  height: 30px; /* define a altura da imagem */
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 23%;
+
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  border: none;
+  background-color: rgba(22, 22, 22, 0);
+  color: #fff;
+  font-size: 16px;
+  cursor: help;
+  z-index: 9999;
+  transition: transform 0.3s ease;
+}
+
+.info-button.active {
+  transform: translateY(-100%);
+}
+
+/* Estilo do painel de informações */
+.info-panel {
+  position: fixed;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, 100%);
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.082);
+  z-index: 9998;
+  display: none;
+  max-width: 80%;
+  max-height: 80%;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+}
+.info-button.active ~ .info-panel {
+  display: block;
+  transform: translateY(-100%);
+}
+
+/* Estilo do título do painel de informações */
+.info-panel h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3vh;
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* Estilo do texto do painel de informações */
+.info-panel p {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+/* rede social */
+.button-container {
+  position: fixed;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 999;
+}
+
+.my-button {
+  background-image: url('../../img/github.png');
+  background-size: contain; /* garante que a imagem não fique distorcida */
+  width: 30px; /* define a largura da imagem */
+  height: 30px; /* define a altura da imagem */
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 23%;
+
+  background-color: #ffffff00;
+  border: none;
+  padding: 8px 8px;
+  text-align: ceter;
+  text-decoration: none;
+  display: block;
+  width: 34px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.my-button:hover {
+  transform: scale(1.2);
+}
+
+.my-button2 {
+  background-image: url('../../img/insta.png');
+  background-size: contain; /* garante que a imagem não fique distorcida */
+  width: 30px; /* define a largura da imagem */
+  height: 30px; /* define a altura da imagem */
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 23%;
+
+  background-color: #ffffff00;
+  border: none;
+  padding: 8px 8px;
+  text-align: ceter;
+  text-decoration: none;
+  display: block;
+  width: 34px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.my-button2:hover {
+  transform: scale(1.2);
+}
+
+.my-button3 {
+  background-image: url('../../img/discord.png');
+  background-size: contain; /* garante que a imagem não fique distorcida */
+  width: 30px; /* define a largura da imagem */
+  height: 30px; /* define a altura da imagem */
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 23%;
+
+  background-color: #ffffff00;
+  border: none;
+  padding: 8px 8px;
+  text-align: ceter;
+  text-decoration: none;
+  display: block;
+  width: 34px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.my-button3:hover {
+  transform: scale(1.2);
+}
+
+/*menu navegação*/
+nav {
+  text-align: center;
+  margin-top: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav a {
+  color: whitesmoke;
+  text-decoration: none;
+  padding: 0px 50px 10px 0;
+  font-size: 15pt;
+  position: relative;
+}
+
+nav a::after {
+  content: " ";
+  width: 0%;
+  height: 4px;
+  background-color: #9b59b6;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s ease-in-out;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
