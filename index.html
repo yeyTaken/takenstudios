@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>TakenStudios</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./geral/css/index.css">
     <link rel="icon" href="./img/logo.png">
     <meta property="og:image" content="./img/logo.png">
     <meta property="og:title" content="TakenStudios">
@@ -17,6 +17,12 @@
   </head>
   <body>
 
+    <nav>
+      <a href="#">Home</a>
+      <a href="./discord/profile.html">Discord</a>
+      <a href="././games/index.html">Projetos</a>
+    </nav>
+ 
     <div class="button-container">
       <a href="https://github.com/yeyTaken/">
         <button class="my-button"></button>
@@ -45,9 +51,12 @@
       <p>A TakenStudios é uma empresa de criação de software e jogos composta por programadores apaixonados por tecnologia. Nós criamos bots, sites, apps e jogos com qualidade e inovação. Venha conhecer nosso trabalho e junte-se à nossa comunidade de jogadores e entusiastas da tecnologia!</p>
     </div>
 
-    <button class="panel-button"></button>
-    <div class="link-panel"></div>
-    <script src="script.js"></script>
+    <script src="./geral/js/index.js"></script>
+    <script>
+      if(!navigator.onLine) {
+        window.location.href = "./space/game/start.html"
+      }
+    </script>
 
   </body>
 </html>
